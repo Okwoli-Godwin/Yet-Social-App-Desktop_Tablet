@@ -2,6 +2,7 @@ import img from "../../assets/25.jpeg"
 import { BsImages } from "react-icons/bs"
 import {BiSmile} from "react-icons/bi"
 import { AiOutlineGif } from "react-icons/ai"
+import {HiOutlineLocationMarker} from "react-icons/hi"
 import Picker from "@emoji-mart/react"
 import {useState} from "react"
 
@@ -23,8 +24,7 @@ const Postfile = () => {
           <img src={img} className="w-[50px] h-[50px] rounded-[50px] " />
 
           <div className="flex-1 column ml-[20px] pr-[20px]">
-              <input
-                  type="text"
+              <textarea
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   className="pl-[13px] w-[100%] outline-none text-[18px] resize-none"
@@ -45,9 +45,10 @@ const Postfile = () => {
                   <div className="flex">
                       <div className="text-blue-500 cursor-pointer mr-[17px]"><BsImages /></div>
                       <div className="text-blue-500 cursor-pointer text-[20px] mr-[17px]"><AiOutlineGif /></div>
-                      <button onClick={() => setShowEmojis(!showEmojis)} className="text-blue-500 cursor-pointer text-[20px]">
+                      <button onClick={() => setShowEmojis(!showEmojis)} className="text-blue-500 cursor-pointer text-[20px] mr-[17px]">
                           <BiSmile />
                       </button>
+                      <div className="text-blue-500 cursor-pointer text-[20px]"><HiOutlineLocationMarker /></div>
                   </div>
 
                   {showEmojis && (
