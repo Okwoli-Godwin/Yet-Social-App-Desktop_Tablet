@@ -1,5 +1,6 @@
 import img from "../../assets/25.jpeg"
 import { BsImages } from "react-icons/bs"
+import {BiSmile} from "react-icons/bi"
 import { AiOutlineGif } from "react-icons/ai"
 import Picker from "@emoji-mart/react"
 import {useState} from "react"
@@ -43,8 +44,10 @@ const Postfile = () => {
               <div className="w-[100%] flex h-[48px] mt-[4px] items-center">
                   <div className="flex">
                       <div className="text-blue-500 cursor-pointer mr-[17px]"><BsImages /></div>
-                      <div className="text-blue-500 cursor-pointer text-[20px]"><AiOutlineGif /></div>
-                      <button onClick={() => setShowEmojis(!showEmojis)}>goat</button>
+                      <div className="text-blue-500 cursor-pointer text-[20px] mr-[17px]"><AiOutlineGif /></div>
+                      <button onClick={() => setShowEmojis(!showEmojis)} className="text-blue-500 cursor-pointer text-[20px]">
+                          <BiSmile />
+                      </button>
                   </div>
 
                   {showEmojis && (
